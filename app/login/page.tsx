@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import { SubmitButton } from "./submit-button";
+import { LoginWithGithubBtn } from "./login-with-github";
 
 export default function Login({
   searchParams,
@@ -108,6 +109,7 @@ export default function Login({
         >
           Sign Up
         </SubmitButton>
+        {/* <LoginWithGithubBtn /> */}
         {searchParams?.message && (
           <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
             {searchParams.message}
